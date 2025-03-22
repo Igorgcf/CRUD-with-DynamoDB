@@ -33,6 +33,15 @@ echo %AWS_SECRET_ACCESS_KEY%
 echo %AWS_DEFAULT_REGION%
 ```
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Database](#database)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+
 ## Installation
 
 1. Clone the repository:
