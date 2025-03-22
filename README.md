@@ -21,6 +21,62 @@ git clone https://github.com/Igorgcf/CRUD-with-DynamoDB.git
 1. Start the application with Maven
 2. The API will be accessible at http://localhost:8080
 
+## API Endpoints
+The API provides the following endpoints:
+
+**POST PLAYER & SCORE**
+```markdown
+POST /v1/players/{username}/games - Register a new player end score into the app.
+```
+```markdown
+Body: "score" : 100
+return HTTP Status 200 OK
+```
+
+**GET PLAYERS by USERNAME**
+```markdown
+GET /v1/players/{username}/games - Retrieve a list of players filtered by username.
+```
+```json
+   [
+    {
+        "username": "bruno",
+        "gameId": "6a5a3174-5fc3-4dec-a9e2-a0649ebebde0",
+        "score": 500.0,
+        "createdAt": "2025-03-22T15:18:59.384259700Z"
+    }
+]
+```
+
+**GET PLAYERS by ID**
+```markdown
+GET /v1/players/{username}/games/{id}{
+```
+```json
+{
+    "username": "bruno",
+    "gameId": "6a5a3174-5fc3-4dec-a9e2-a0649ebebde0",
+    "score": 500.0,
+    "createdAt": "2025-03-22T15:18:59.384259700Z"
+}
+```
+
+**PUT PLAYER by ID**
+```markdown
+PUT /v1/players/{username}/games/{id}
+```
+```markdown
+return HTTP Status 204 No Content
+```
+
+**DELETE PLAYER by ID**
+```markdown
+DELETE /v1/players/{username}/games/{id}
+```
+```markdown
+return HTTP Status 204 No Content
+```
+
 ## Database
 The project utilizes [DynamoDB](https://docs.aws.amazon.com/dynamodb/) as the database.
 
