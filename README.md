@@ -6,6 +6,33 @@ Esta é uma aplicação simples que implementa um CRUD utilizando Java e Spring 
 
 ⚠️ Atenção!!! O Localstack deve estar configurado e rodando junto com o Docker Desktop.
 
+Link to step-by-step instructions on how to install localstack and Docker Desktop on your machine: [LocalStack e AWS CLI](https://www.youtube.com/watch?v=yOdp0wz5NeI&t=309s)
+
+Link para o passo à passo de como instalar o localstack e Docker Desktop em sua máquina:
+[LocalStack e AWS CLI](https://www.youtube.com/watch?v=yOdp0wz5NeI&t=309s)
+
+⚠️ Atenção!!!
+O LocalStack emula serviços da AWS, mas o SDK da AWS ainda precisa de credenciais para funcionar, mesmo que sejam fictícias, sendo então necessário configurar as credencias para utilizar os serviços AWS através do LocalStack.
+
+✅ Opção: Definir as variáveis permanentemente no Windows
+
+1. Abra o CMD como Administrador.
+2. Execute os seguintes comandos para definir as variáveis de forma permanente:
+
+```markdown
+setx AWS_ACCESS_KEY_ID "fakeAccessKey" /M
+setx AWS_SECRET_ACCESS_KEY "fakeSecretKey" /M
+setx AWS_DEFAULT_REGION "us-east-1" /M
+```
+3. Feche o CMD e abra novamente para as alterações surtirem efeito.
+4. Teste se as variáveis foram definidas corretamente:
+
+```markdown
+echo %AWS_ACCESS_KEY_ID%
+echo %AWS_SECRET_ACCESS_KEY%
+echo %AWS_DEFAULT_REGION%
+```
+
 ## Installation
 
 1. Clone the repository:
